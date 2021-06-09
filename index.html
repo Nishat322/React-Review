@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Hello World</title>
+</head>
+<body>
+    <div id = 'application-root'></div>
+    
+</body>
+
+<!--- The two scripts below have created two variable React and ReactDOM for us to use -->
+<script
+    src = 'https://unpkg.com/react@16/umd/react.development.js ' >
+</script>
+<!-- ReactDOM is used to connect our React code to the DOM-->
+<script 
+    src = 'https://unpkg.com/react-dom@16/umd/react-dom.development.js' >
+</script>
+<script>
+    /* The render() method accepts two arguments
+        - container - the DOM element we insert app into (in this case the div 'application-root')
+        - element - Our React applcation, will become the contents of the container
+    */
+    // ReactDOM.render(element, container)
+
+    const appRoot = document.querySelector('#application-root')
+    ReactDOM.render('Hello World!', appRoot)
+
+</script>
+</html>
