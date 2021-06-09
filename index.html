@@ -19,7 +19,13 @@
 <script 
     src = 'https://unpkg.com/react-dom@16/umd/react-dom.development.js' >
 </script>
-<script>
+<!-- Script below loads Babel allowing for JSX to be used-->
+<script 
+    src = 'https://unpkg.com/babel-standalone@6/babel.min.js' >
+</script>
+
+<!-- type = 'text/babel' should not be used in production since it is slow -->
+<script type = 'text/babel'>
     /* The render() method accepts two arguments
         - container - the DOM element we insert app into (in this case the div 'application-root')
         - element - Our React applcation, will become the contents of the container
@@ -34,9 +40,18 @@
         - prop
         - children
     */
+    //const helloWorldH1 = React.createElement('h1', null, 'Hello world!')
 
-    const helloWorldH1 = React.createElement('h1', null, 'Hello world!')
-    ReactDOM.render(helloWorldH1, appRoot)
+    // Using JSX allows us to remove the createElement method
+    //const helloWorldH1 = <h1> Hello, World! </h1>
+
+    ReactDOM.render(
+        <div> 
+            <h1> Hello, World! </h1>
+            <p> How are you today? </p>    
+            <h2> Look what React can do! </h2>
+        </div>
+        , appRoot)
 
 </script>
 </html>
