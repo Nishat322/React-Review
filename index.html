@@ -32,7 +32,8 @@
     */
     // ReactDOM.render(element, container)
 
-    const appRoot = document.querySelector('#application-root')
+    //const appRoot = document.querySelector('#application-root')
+    
     /* Use createElement method in React to create a React object so you could use HTML elements such as h1 and such
         Use this method to creacte an instance of an element
         The createElement method takes in three arguments
@@ -45,13 +46,32 @@
     // Using JSX allows us to remove the createElement method
     //const helloWorldH1 = <h1> Hello, World! </h1>
 
+    // ReactDOM.render(
+    //     <div> 
+    //         <h1> Hello, World! </h1>
+    //         <p> How are you today? </p>    
+    //         <h2> Look what React can do! </h2>
+    //     </div>
+    //     , appRoot)
+
+    // Using components
+    function App () {
+        return (
+            <div>
+                <h1> Hello, everyone! </h1>
+                <p> We think </p>
+                <ul> 
+                    <li> React </li>    
+                    <li> is </li>   
+                    <li> brilliant! </li>   
+                </ul>
+            </div>
+        )
+    }
+
     ReactDOM.render(
-        <div> 
-            <h1> Hello, World! </h1>
-            <p> How are you today? </p>    
-            <h2> Look what React can do! </h2>
-        </div>
-        , appRoot)
+        <App/>, document.querySelector('#application-root')
+    )
 
 </script>
 </html>
